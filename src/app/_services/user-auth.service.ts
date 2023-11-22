@@ -8,22 +8,22 @@ export class UserAuthService {
   constructor() { }
 
   public setRole(role: string) {
-    localStorage.setItem('role', role);
+    sessionStorage.setItem('role', role);
   }
 
   public getRole(): string | null{
-    return localStorage.getItem('role');
+    return sessionStorage.getItem('role');
   }
 
   public setToken(token: string) {
-    localStorage.setItem('token', token);
+    sessionStorage.setItem('token', token);
   }
 
   public getToken(): string | null{
-    return localStorage.getItem('token');
+    return sessionStorage.getItem('token');
   }
   public clear() {
-    localStorage.clear();
+    sessionStorage.clear();
   }
 
   public isLoggedIn() {

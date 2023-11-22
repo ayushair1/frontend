@@ -1,0 +1,51 @@
+mat-card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the header inside mat-card */
+  mat-card-header {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  /* Style the form within mat-card-content */
+  .mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style the form fields */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the submit button */
+  button {
+    margin-top: 20px;
+  }
+  
+  /* Style the radio group */
+  .mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the radio buttons */
+  .mat-radio-button {
+    margin-right: 10px;
+  }
+  
+  /* Style the back to login link */
+  a {
+    margin-top: 10px;
+    text-decoration: none;
+  }

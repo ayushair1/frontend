@@ -1,0 +1,104 @@
+/* .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .main-body {
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 1348px;
+    mat-form-field {
+      width: 100%;
+    }
+  }
+  
+  .action {
+    display: flex;
+    gap: 5px;
+  } */
+
+  /* .manager-container{
+    border: 1px solid red;
+  } */
+
+  .manager-container button {
+    padding: 8px 16px; /* Adjust padding as needed */
+    background-color: gray; /* Transparent background */
+    color: #000; /* Black button text color */
+    border: 2px solid #000; /* Black border */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+    margin-bottom: 20px;
+  }
+  
+  .manager-container button:hover {
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* Text color on hover */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .manager-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .table-manager table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-manager th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .table-manager th,
+  .table-manager td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+
+  .table-manager tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+
+  .table-manager button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+
+  .table-manager button:nth-child(odd) {
+    background-color: #4caf50;
+  }
+  
+
+  .table-manager button:nth-child(even) {
+    background-color: #f44336;
+  }
+  
+  
+  .table-manager button:hover {
+    opacity: 0.8;
+  }

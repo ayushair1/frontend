@@ -1,0 +1,93 @@
+<div mat-dialog-title>
+    <h1>Task Create</h1>
+</div>
+<form [formGroup]="taskForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Task Name</mat-label>
+                <input matInput type="text" placeholder="Example" formControlName="taskName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Task Description</mat-label>
+                <input matInput placeholder="Example" formControlName="taskDescription">
+            </mat-form-field>
+        </div>
+        
+
+        <!-- <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Created Date</mat-label>
+                <input matInput [matDatepicker]="createDatePicker" formControlName="taskCreatedDate"
+                placeholder="YYYY-MM-DD" (dateInput)="formatDate($event)">
+                <mat-hint>YYYY/MM/DD</mat-hint>  
+                <mat-datepicker-toggle matIconSuffix [for]="createDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #createDatePicker></mat-datepicker>
+            </mat-form-field>
+
+        </div>  -->
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Due Date</mat-label>
+                <input matInput [matDatepicker]="DueDatePicker" formControlName="taskDueDate"
+                placeholder="YYYY-MM-DD" (dateInput)="formatDate2($event)">
+                <!-- <mat-hint>YYYY/MM/DD</mat-hint> -->
+                <mat-datepicker-toggle matIconSuffix [for]="DueDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #DueDatePicker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-radio-group aria-label="Select an option" formControlName="currentStatus">
+                <mat-label><b>Current Status</b></mat-label>
+                <mat-radio-button value="ToDo">To Do</mat-radio-button>
+                <mat-radio-button value="InProgress">In Progress</mat-radio-button>
+                <mat-radio-button value="Done">Done</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div formGroupName="assignee">
+            <!-- <div>
+              <label for="userId">User ID </label>
+              <input type="text" id="userId" formControlName="user_id">
+            </div> -->
+            <div>
+                <label for="userId">User ID:</label>
+                <select type="text" id="userId" formControlName="user_id">
+                  <option *ngFor="let user of userIds" [value]="user.user_id">{{ user.user_id }}</option>
+                </select>
+            </div>
+
+            <!-- <div>
+                <label for="username">User Name:</label>
+                <select type="text" id="username" formControlName="username">
+                  <option *ngFor="let user of username" [value]="user.name">{{ user.username }}</option>
+                </select>
+            </div> -->
+
+
+            <div>
+              <label for="role">Role </label>
+              <input type="text" id="role" formControlName="role">
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Assignee Name</mat-label>
+                <mat-select formControlName="assignee">
+                    <mat-option [value]="jsonData.assignee.username">
+                        {{ jsonData.assignee.username }}
+                      </mat-option>
+                    <mat-option *ngFor="let val of assignee" [value]="val">{{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div> -->
+        
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'save'}}</button>
+    </div>
+</form>
